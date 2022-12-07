@@ -13,10 +13,20 @@ function userLogin(form){
         })
     })
     .then(response =>{
-        /*response will go here*/
+        console.log(response)
+        console.log(response.status)
+        if(response.status === 404){
+            throw new Error(response.text().then(body => console.log(body)))
+        }
+        console.log(...response.headers)
+        document.getElementById("login-form").innerHTML = "<h4 id='welcome'> Welcome to the Employee Reimbursement System, " + username + "</h4>"
+        console.log(password)
+        logoutButton()
+        window.localStorage.setItem("token", response.headers.get("authorization"))
     })
     .catch(error => {
-        /*error handling will go here*/
+        console.error(error)
+        document.getElementById("login-form").innerHTML = `${loginInitial} <h4>Login Failed. Please try again.</h4>`
     })
 }
 
