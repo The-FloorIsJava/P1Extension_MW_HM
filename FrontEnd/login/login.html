@@ -11,10 +11,12 @@
     <div id="login-form">
         <h4>Enter your account details below: </h4>
         <form>
-            <input id="username" type="text" placeholder="Username"/><br/>
-            <input id="password" type="password" placeholder="Password"/><br/>
-            <button id="button">Login</button>
+            <input id="username" type="text" placeholder="Username" value="" /><br/>
+            <input id="password" type="password" placeholder="Password" value="" /><br/>
+            <button id="button" name="button" value="Login" onclick="userLogin(this.form)">Login</button>
         </form>
     </div>
+
+    <script src="login.js"></script>
 </body>
 </html>
