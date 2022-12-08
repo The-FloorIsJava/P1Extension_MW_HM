@@ -31,9 +31,15 @@ function userLogin(form){
 }
 
 function logoutButton(){
+    let button = document.createElement("button")
+    let node = document.createTextNode("Logout")
 
+    button.appendChild(node)
+    button.setAttribute("onclick", "logout()")
+    const welcomeH1 = document.getElementById("welcome")
+    welcomeH1.appendChild(button)
 }
 
 function logout(){
-
+    document.getElementById("login-form").innerHTML = loginBlank;
 }
