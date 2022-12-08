@@ -9,11 +9,11 @@
 <body>
     <h1>Employee Login</h1>
     <div id="login-form">
-        <h4>Enter your account details below: </h4>
+        <h4 id="directions">Enter your account details below: </h4>
         <form>
             <input id="username" type="text" placeholder="Username" value="" /><br/>
             <input id="password" type="password" placeholder="Password" value="" /><br/>
-            <button id="button" name="button" value="Login" onclick="userLogin(this.form)">Login</button>
+            <input id="button" type="button" value="Login" onclick="userLogin(this.form)" />
         </form>
     </div>
 
