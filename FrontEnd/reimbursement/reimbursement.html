@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Reimbursement Request</title>
+</head>
+<body>
+    <h1>New Reimbursement Request</h1>
+    <div id="request-form">
+        <h4 id="directions">Create a new ticket by filling all fields below</h4>
+        <form>
+            <input id="amount" type="text" placeholder="Amount" value="" /><br/>
+            <input id="description" type="text" placeholder="Description" value="" /><br/>
+            <input id="button" type="button" value="Submit Ticket" onclick="submitRequest(this.form)" />
+        </form>
+    </div>
+
+    <script src="reimbursement.js"></script>
+</body>
+</html>
