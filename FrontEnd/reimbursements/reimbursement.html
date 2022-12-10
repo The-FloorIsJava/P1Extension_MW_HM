@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="reimbursements">
+        <h4>Welcome to the Reimbursements Page, please click the button below to find all users.</h4>
+        <button onclick="viewReimbursements()">View Reimbursements</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>TicketId</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="reimbursementTable"></tbody>
+        </table>
+    </div>
+    <script src="reimbursement.js"></script>
+</body>
+</html>
