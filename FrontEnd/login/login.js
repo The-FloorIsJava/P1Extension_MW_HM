@@ -12,14 +12,17 @@ function userLogin(form){
             password: password
         })
     })
-    .then(response =>{
+    .then(response => {
         console.log(response)
         console.log(response.status)
         if(response.status === 401){
             throw new Error(response.text().then(body => console.log(body)))
         }
         console.log(...response.headers)
-        document.getElementById("login-form").innerHTML = "<h4 id='welcome'> Welcome to the User Reimbursement System, " + username + "</h4><a href='../allUsers/allUsers.html'>USERS</a>"
+        document.getElementById("login-form").innerHTML = 
+        "<h4 id='welcome'>Welcome to the User Reimbursement System, " + username + "</h4>" +
+        "<a href='../allUsers/allUsers.html'>Users</a><br />" +
+        "<a href='../reimbursement/reimbursement.html'>New Reimbursement Request</a>"
         console.log(password)
         logoutButton()
         window.localStorage.setItem("token", response.headers.get("authorization"))
