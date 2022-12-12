@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERS Login</title>
+    <title>URS Login</title>
 </head>
 <body>
-    <h1>Employee Login</h1>
+    <h1>User Login</h1>
     <div id="login-form">
-        <h4>Enter your account details below: </h4>
+        <h4 id="directions">Enter your account details below: </h4>
         <form>
             <input id="username" type="text" placeholder="Username" value="" /><br/>
             <input id="password" type="password" placeholder="Password" value="" /><br/>
-            <button id="button" name="button" value="Login" onclick="userLogin(this.form,event)">Login</button>
+
+            <input id="button" type="button" value="Login" onclick="userLogin(this.form)" />
+
         </form>
     </div>
 
